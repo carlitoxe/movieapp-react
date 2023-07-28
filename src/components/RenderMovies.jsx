@@ -10,7 +10,7 @@ function RenderMovies({movies, loading, lastMovieElementRef}) {
         {
                   <div className="flex flex-wrap justify-center gap-6 mb-6">
                    
-                  { loading ? <RenderMovieSkeleton cards={10} /> :
+                  { 
 
                 movies.map((movie, i) => {
                     //   console.log(i);

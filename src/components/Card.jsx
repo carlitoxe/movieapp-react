@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { lazyLoading } from "../hooks/lazyLoading"
 import { useNavigate } from "react-router-dom"
 import noimage from '../assets/no-image.svg'
+import { RenderMovieSkeleton } from "./RenderMovieSkeleton"
 
 
 function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
@@ -17,7 +18,8 @@ function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
     }, [img])
 
     return (
-        <div className="flex flex-col w-[200px]" key={movie.id} ref={i === movies.length - 1 ? lastMovieElementRef: null}>
+  
+    <div className="flex flex-col w-[200px]" key={movie.id} ref={i === movies.length - 1 ? lastMovieElementRef: null}>
                                
         <img 
             data-src={movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : noimage} 
@@ -27,9 +29,11 @@ function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
             onClick={() => navigate(`/movie/${movie.id}`)}
         />
   
-    <p className="mt-2"><span className="text-yellow-300">★</span> {movie.vote_average.toFixed(1)}</p>
-    <a className="cursor-pointer hover:text-blue-700 mt-0.5" onClick={() => navigate(`/movie/${movie.id}`)}>{movie.title}</a>
-</div>
+        <p className="mt-2"><span className="text-yellow-300">★</span> {movie.vote_average.toFixed(1)}</p>
+        <a className="cursor-pointer hover:text-blue-700 mt-0.5" onClick={() => navigate(`/movie/${movie.id}`)}>{movie.title}</a>
+    </div>
+
+        
     )
 }
 
