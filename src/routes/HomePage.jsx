@@ -11,7 +11,7 @@ function HomePage() {
     const navigate = useNavigate();
     const [query, setQuery] = useState('');
     
-
+    
     return (
         <>
             <Header>

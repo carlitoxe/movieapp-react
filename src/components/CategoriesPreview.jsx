@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetItemsAPI } from "../hooks/useApi";
+import Skeleton from "react-loading-skeleton";
 
 function CategoriesPreview() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ function CategoriesPreview() {
         <>
             <section className="px-8">
                 <h1 className="mt-6 pl-6 text-2xl font-semibold text-white">Categories</h1>
-                {loading ? (<div>Loading...</div>) :
+                {loading ? (<div className="mt-5 px-10"> <Skeleton count={2}/> </div>) :
                 (<ul className='text-center mt-2'>  
                     {categories?.map((category) => {
                         

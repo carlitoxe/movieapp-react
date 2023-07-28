@@ -1,30 +1,28 @@
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { MoviePreviewSkeleton } from "./MoviePreviewSkeleton";
+import { lazyLoading } from "../hooks/lazyLoading";
+import { useEffect, useRef, version } from "react";
+import { PreviewCard } from "./PreviewCard";
 
-function MoviesPreview({movies, loading, link}) {
+function MoviesPreview({movies, loading}) {
     const navigate = useNavigate();
+    
+
+    
     return (
         <article className="trendingPreview-movieList flex overflow-x-scroll overflow-y-hidden gap-3.5 pb-2.5">
-                    
+    
         {!loading ? (movies.filter(movie => movie.poster_path).map(movie => {
 
         return(
-
-            <div className="flex flex-col max-w-[150px]" key={movie.id}>
-                    <img 
-                        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} 
-                        alt={`${movie.title} poster`} 
-                        className="movie-img w-[150px]  h-[225px] min-w-[150px] rounded-lg cursor-pointer"
-                        onClick={() => {
-                            navigate(`/movie/${movie.id}`)
-                           navigate(0)
-                        }}
-                    />
-              
-                <p className="mt-2"><span className="text-yellow-300">★</span> {movie.vote_average.toFixed(1)}</p>
-                <a className="cursor-pointer hover:text-blue-700 mt-0.5" onClick={() => navigate(`/movie/${movie.id}`)}>{movie.title}</a>
-            </div>
+            <PreviewCard 
+              movie={movie}
+              key={movie.id}
+              loading={loading}
+              img={movie.poster_path}
+            />
         ) 
-        }) ) : <p>Loading...</p>
+        }) ) : <MoviePreviewSkeleton cards={10} />
 
         }
 

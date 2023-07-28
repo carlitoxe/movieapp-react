@@ -10,11 +10,13 @@ import { SearchPage } from './routes/SearchPage';
 import { Header } from './components/Header';
 import { HeaderLeft } from './components/HeaderLeft';
 import { HeaderRight } from './components/HeaderRight';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 function App() {
   // useScrollToTop();
   return (
     <>
+      <SkeletonTheme baseColor='#313131' highlightColor='#525252'>
       <HashRouter>
        {/* <Header>
                 <HeaderLeft />
@@ -31,6 +33,7 @@ function App() {
           <Route path='*' element={<p>Not Found</p>} />
         </Routes>
       </HashRouter>
+      </SkeletonTheme>
     </>
   )
 }
