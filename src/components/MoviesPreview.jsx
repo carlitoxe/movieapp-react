@@ -5,19 +5,17 @@ import { useEffect, useRef, version } from "react";
 import { PreviewCard } from "./PreviewCard";
 
 function MoviesPreview({movies, loading}) {
-    const navigate = useNavigate();
-    
 
     
     return (
-        <article className="trendingPreview-movieList flex overflow-x-scroll overflow-y-hidden gap-3.5 pb-2.5">
+        <article className="trendingPreview-movieList flex overflow-x-scroll overflow-y-hidden gap-3.5 pb-2.5 pt-3.5 px-3">
     
-        {!loading ? (movies.filter(movie => movie.poster_path).map(movie => {
+        {!loading ? (movies.filter(movie => movie.poster_path).map((movie, i) => {
 
         return(
             <PreviewCard 
               movie={movie}
-              key={movie.id}
+              key={i}
               loading={loading}
               img={movie.poster_path}
             />

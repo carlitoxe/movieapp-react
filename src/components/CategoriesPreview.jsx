@@ -15,7 +15,7 @@ function CategoriesPreview() {
 
     return (
         <>
-            <section className="px-8">
+            <section className="px-8 mb-8">
                 <h1 className="mt-6 pl-6 text-2xl font-semibold text-white">Categories</h1>
                 {loading ? (<div className="mt-5 px-10"> <Skeleton count={2}/> </div>) :
                 (<ul className='text-center mt-2'>  

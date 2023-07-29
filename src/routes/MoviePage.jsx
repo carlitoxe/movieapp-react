@@ -67,7 +67,7 @@ function MoviePage() {
 
             <Banner 
                 id={id}
-                poster={movie.poster_path}
+                poster={movie.poster_path && movie.poster_path}
                 backdrop={movie.backdrop_path}
                 overview={movie.overview}
                 title={movie.title}

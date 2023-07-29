@@ -6,6 +6,7 @@ import { HeaderRight } from "../components/HeaderRight";
 import { SearchForm } from "../components/SearchForm";
 import { TrendingPreview } from "../components/TrendingPreview";
 import { CategoriesPreview } from "../components/CategoriesPreview";
+import { Footer } from "../components/Footer";
 
 function HomePage() {
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ function HomePage() {
             </Header>
             <TrendingPreview />
             <CategoriesPreview />
+            <Footer />
         </>
     )
 }

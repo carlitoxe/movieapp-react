@@ -3,7 +3,7 @@ import noimage from '../assets/no-image.svg'
 function lazyLoading(ref) {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            console.log(entry);
+            // console.log(entry);
             if (!entry.isIntersecting) return
             const img = entry.target;
             if (entry.isIntersecting) {
