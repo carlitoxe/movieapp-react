@@ -14,6 +14,7 @@ function useGetColor({url}) {
     
     function getColor() {
         console.log(img.src);
+        colorThief
         return setColors(colorThief.getColor(img));
     }
 
