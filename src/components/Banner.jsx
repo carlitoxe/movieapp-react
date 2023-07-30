@@ -125,7 +125,7 @@ function Banner({
                                 }
            
                             </div>
-                            <div className="info-container ml-2 md:ml-4 md:ml-7 md:mr-4">
+                            <div className="info-container mx-2 md:ml-4 md:ml-7 md:mr-4">
                                 {loading || loadingCrew ? 
                                 <>
                                 {isPhone && <>
