@@ -25,7 +25,7 @@ function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
             data-src={movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : noimage} 
             alt={`${movie.title} poster`} 
             ref={imgRef}
-            className="movie-img w-[200px] min-w-[200px] h-[300px] min-h-[300px] object-cover rounded-lg cursor-pointer"
+            className="movie-img md:hover:scale-110 transition duration-500 md:mb-2 w-[200px] min-w-[200px] h-[300px] min-h-[300px] object-cover rounded-lg cursor-pointer"
             onClick={() => navigate(`/movie/${movie.id}`)}
         />
   

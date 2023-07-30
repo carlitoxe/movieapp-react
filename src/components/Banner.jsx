@@ -71,7 +71,19 @@ function Banner({
     // console.log(crew);
     
     const directors = crew.filter(({job}) => job === 'Director')
+
     const writers = crew.filter(({job}) => job === 'Screenplay' || job === 'Writer')
+    const writerId = [];
+
+    // this is to avoid showing duplicate writers
+    const uniqueWriters = writers.filter(writer => {
+        const isDuplicate = writerId.includes(writer.id)
+        if(!isDuplicate) {
+            writerId.push(writer.id)
+            return true
+        }
+        return false
+    })
 
     // backgroundGradient.style.background = ``
     // console.log(writers);
@@ -152,11 +164,11 @@ function Banner({
                                     <article className='flex items-center'>
                                     <ul className='min-w-[140px]'>    
                                     <p className='text-gray-100'>Directed by</p>
-                                        {directors?.map((director) => {
+                                        {directors?.map((director, i) => {
                                             return (
                                                 <li 
                                                     className='text-white font-medium inline-flex mr-2' 
-                                                    key={director.id}
+                                                    key={i}
                                                 >
                                                     {director.name}
                                                 </li>
@@ -168,12 +180,12 @@ function Banner({
 
                                     <ul className='ml-6'>
                                     <p className='text-gray-100'>Written by</p>
-                                        {writers?.map((writer) => {
+                                        {uniqueWriters?.map((writer, i) => {
                                             return (
                                             
                                                 <li 
-                                                    className='text-white font-medium inline-flex mr-3' 
-                                                    key={writer.id}
+                                                    className='text-white font-medium inline-flex mr-2.5' 
+                                                    key={i}
                                                 >
                                                     {writer.name}
                                                 </li>
@@ -186,11 +198,11 @@ function Banner({
                                     </article>
                             
                                     <ul className='mt-5 text-center'>
-                                        {genres?.map((genre) => {
+                                        {genres?.map((genre, i) => {
                                             return (
                                             
                                                     <li onClick={() => navigate(`/category/${genre.id}/${genre.name}`)} 
-                                                        key={genre.id}
+                                                        key={i}
                                                         className='cursor-pointer mr-1.5 inline-flex text-white font-medium border border-solid border-white rounded-2xl py-1 px-3 hover:bg-sky-600'>
                                                         {genre.name}
                                                     </li>
