@@ -85,7 +85,7 @@ function Banner({
     return (
         <>  
             
-                <section className="movieDetail-container mt-6 md:mt-10">
+                <section className="movieDetail-container mt-3 md:mt-10">
                 
                     <div 
                         className={`banner-background md:h-fit md:bg-cover bg-no-repeat`}

@@ -24,7 +24,7 @@ function PreviewCard({movie, loading, img}) {
             ref={imgRef}
             onClick={() => {
                 navigate(`/movie/${movie.id}`)
-               navigate(0)
+                navigate(0) || document.location.reload()
             }}
         />
   
