@@ -16,7 +16,7 @@ function SearchForm({value, setValue}) {
     }
 
     return (
-        <div className="search-form-container px-8 w-full flex justify-center mt-4 md:mt-0 px-3 md:px-0">
+        <div className="search-form-container md:px-8 w-full flex justify-center mt-4 md:mt-0 px-3 md:px-0">
         <form className="search-form rounded-full flex rounded-full p-1 h-[35px] bg-transparent  border border-gray-600 items-center" onSubmit={onSubmit}>
             <input value={search} onChange={e => setSearch(e.target.value.toLowerCase())} className="search-input p-1 rounded-full bg-transparent w-full px-4 focus:outline-none w-full placeholder:text-slate-500" type="text" placeholder="Search for movies..." />
             <button type="submit" className="search-button" onClick={() => setValue(search)}> 

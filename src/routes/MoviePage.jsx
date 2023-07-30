@@ -91,8 +91,8 @@ function MoviePage() {
       
                     {related.length > 0 ?
                     
-                <article className="mt-10 px-8 mb-5">
-                    <h2 className="text-white text-2xl font-bold mt-10 mb-3">Related Movies</h2>
+                <article className="pt-3 mb-5 md:mt-10 md:px-8 md:mb-5">
+                    <h2 className="ml-4 text-white text-2xl font-bold md:mt-10 md:mb-3">Related Movies</h2>
                         <MoviesPreview 
                             movies={related}
                             loading={loadingRelated}

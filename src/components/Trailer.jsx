@@ -1,7 +1,7 @@
 function Trailer({trailer, loading}) {
     return (
             trailer ? 
-         <article className="mt-8 mr-1 px-10 mb-8">
+         <article className="mt-7 px-4 mb-10 md:mt-8 md:mr-1 md:px-10 md:mb-8">
             <h2 className="text-white text-2xl font-bold">Trailer</h2>
             <div className="relative pt-[56.25%]">
             {

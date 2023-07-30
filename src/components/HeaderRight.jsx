@@ -6,8 +6,8 @@ function HeaderRight() {
     
     
     return (
-    <div className="header-container-right flex items-center w-full md:w-fit">
-        <select name="language" id="lang" className="select-language-container h-[30px] rounded-lg bg-gray-800 mr-3 hidden md:block">
+    <div className="header-container-right hidden md:flex items-center w-full md:w-fit">
+        <select name="language" id="lang" className="select-language-container h-[30px] rounded-lg bg-gray-800 mr-3">
             <option className="optLang" value="en">🇺🇸 English</option>
             <option className="optLang" value="es-ES">🇪🇸 Spanish</option>
             <option className="optLang" value="fr">🇫🇷 French</option>
