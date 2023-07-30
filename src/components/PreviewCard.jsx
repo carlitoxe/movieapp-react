@@ -20,7 +20,7 @@ function PreviewCard({movie, loading, img}) {
         <img 
             data-src={`https://image.tmdb.org/t/p/w300${img}`} 
             alt={`${movie.title} poster`} 
-            className="movie-img w-[150px] h-[225px] min-w-[150px] rounded-lg cursor-pointer hover:scale-110 transition duration-500 md:mb-1" 
+            className="movie-img w-[150px] h-[225px] min-w-[150px] rounded-lg cursor-pointer md:hover:scale-110 transition duration-500 md:mb-1" 
             ref={imgRef}
             onClick={() => {
                 navigate(`/movie/${movie.id}`)

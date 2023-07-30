@@ -146,7 +146,7 @@ function Banner({
                                     <>
 
                                             <h1 className="inline-block w-4/5 text-3xl mt-5 md:mt-0 text-white text-center font-bold mb-4">{title} {year ? <span className='text-gray-200 font-normal'>({year})</span> : null }</h1>
-                                    <p className='inline-block text-2xl w-1/6 text-right font-medium'><span className='text-yellow-300'>★</span>{voteAverage?.toFixed(1)}</p>
+                                    <p className='inline-block md:text-2xl text-xl w-1/6 text-right font-medium'><span className='text-yellow-300'>★</span>{voteAverage?.toFixed(1)}</p>
                                     <p className='text-gray-50 font-medium'>{rhours}h {rminutes}m</p>
                                     <p className="my-5 text-white font-medium">{overview}</p>
                                     
