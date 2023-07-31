@@ -22,7 +22,7 @@ function CardActor({actor, img}) {
         
                 alt={`${actor.name} picture`} 
             />
-            <p className="mt-2 px-2 md:mt-3 md:px-3 text-sm md:text-base text-white font-semibold">{actor.name}</p>
+            <p className="mt-2 px-2 md:mt-3 md:px-3 text-base text-white font-semibold">{actor.name}</p>
             <p className="px-2 md:px-3 md:mt-1 pb-1 text-sm md:text-[0.9rem]">{actor.character}</p>
         </li>
     )
