@@ -38,7 +38,7 @@ function SearchPage() {
             
             {movies.length > 0 ? 
             <>
-            <h1 className="text-center font-medium text-2xl text-white mt-6 md:mt-10 mb-4 md:mb-8">Search for <span className="font-bold italic">"{query}"</span></h1>
+            <h1 className="text-center font-medium text-2xl text-white mt-6 md:mt-10 mb-4 md:mb-8">Search for <span className="font-bold italic">"{query.trim()}"</span></h1>
                 <RenderMovies 
                     movies={movies}
                     loading={loadingMovies}
