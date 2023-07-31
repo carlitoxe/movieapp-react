@@ -38,14 +38,14 @@ function SearchPage() {
             
             {movies.length > 0 ? 
             <>
-            <h1 className="text-center font-medium text-2xl text-white mt-6 md:mt-10 mb-4 md:mb-8">Search for <span className="font-bold italic">"{query.trim()}"</span></h1>
+            <h1 className="text-center font-medium text-xl md:text-2xl text-white px-4 mt-6 md:mt-10 mb-4 md:mb-8">Search for <span className="font-bold italic">"{query.trim()}"</span></h1>
                 <RenderMovies 
                     movies={movies}
                     loading={loadingMovies}
                     lastMovieElementRef={lastMovieElementRef}
                 />
                 </>
-                : <div className="text-center font-medium text-2xl text-white md:mt-10 mb-8">No Results for "{query}"</div>
+                : <div className="text-center font-medium text-xl md:text-2xl text-white mt-6 md:mt-10 mb-8">No Results for "{query}"</div>
             }
 
         </>
