@@ -120,7 +120,7 @@ function Banner({
                                 {loading ?
                                 <>
                                      { isPhone &&  
-                                <div className='min-w-[150px] w-[150px] h-[200px] min-h-[200px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
+                                <div className='min-w-[190px] w-[190px] h-[200px] min-h-[280px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
                                 <Skeleton width={190} height={280} style={{marginBottom: '20px'}}/>
                             </div>}
                               {  !isPhone &&
@@ -138,13 +138,17 @@ function Banner({
            
                             </div>
                             <div className="info-container mx-2 md:ml-4 md:ml-7 md:mr-4">
-                                {loading || loadingCrew ? 
+                                {loading ? 
                                 <>
                                 {isPhone && <>
-                                    <h1 className="inline block mt-4 md:flex md:mt-2 md:mb-4"><Skeleton width={300} /></h1>
-                                <p className='inline-block w-1/6 font-medium text-right'><Skeleton style={{display: 'inline-block'}}/></p>
-                                <p className="my-5 text-white font-medium"><Skeleton height={50}/></p>
-                                <p className="my-5 text-white font-medium"><Skeleton/></p>
+                                    <h1 className="md:inline block text-center mt-4 md:flex md:mt-2 md:mb-4"><Skeleton width={180} /></h1>
+                                <p className='md:inline-block md:w-1/6 font-medium text-center'><Skeleton width={40}/></p>
+                                <p className="text-white font-medium"><Skeleton width={60}/></p>
+                                <p className="my-5 text-white font-medium"><Skeleton height={80}/></p>
+                           
+                                <p className="my-5 text-white font-medium"><Skeleton count={2}/></p>
+
+                                    
                                 </>}
                                 {!isPhone && <>
                                     <h1 className="md:flex md:mt-2 md:mb-4"><Skeleton width={500} /></h1>
