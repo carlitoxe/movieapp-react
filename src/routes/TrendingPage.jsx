@@ -33,7 +33,7 @@ function TrendingPage() {
         />
                 <HeaderRight />
             </Header>
-            <h1 className="text-center font-medium text-3xl text-white mt-10 mb-8">Trending</h1>
+            <h1 className="text-center font-medium text-2xl md:text-3xl text-white mt-6 md:mt-10 mb-5 md:mb-8">Trending</h1>
             <RenderMovies 
                 movies={trends}
                 loading={loadingTrends}
