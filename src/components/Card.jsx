@@ -19,13 +19,13 @@ function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
 
     return (
   
-    <div className="flex flex-col w-[140px] md:w-[200px] border rounded-lg border-gray-600" key={movie.id} ref={i === movies.length - 1 ? lastMovieElementRef: null}>
+    <div className="flex flex-col w-[162px] md:w-[200px] border rounded-lg border-gray-600" key={movie.id} ref={i === movies.length - 1 ? lastMovieElementRef: null}>
                                
         <img 
             data-src={movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : noimage} 
             alt={`${movie.title} poster`} 
             ref={imgRef}
-            className="movie-img md:hover:scale-110 transition duration-500 w-[180px] md:mb-2 md:w-[198px] md:min-w-[198px] md:h-[300px] md:min-h-[300px] object-cover rounded-lg cursor-pointer"
+            className="movie-img md:hover:scale-110 transition duration-500 w-[162px] md:mb-2 md:w-[198px] md:min-w-[198px] md:h-[300px] md:min-h-[300px] object-cover rounded-lg cursor-pointer"
             onClick={() => navigate(`/movie/${movie.id}`)}
         />
   
