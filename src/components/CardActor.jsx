@@ -16,7 +16,7 @@ function CardActor({actor, img}) {
     return (
         <li className='w-[120px] md:min-w-[140px] md:w-[140px] shadow-md shadow-slate-700 my-3 ml-1' key={actor.id}>
             <img
-                className="min-w-[120px] min-h-[133px] md:max-w-[138px] md:min-h-[175px] md:max-h-[175px] rounded-t-lg"
+                className="min-w-[120px] min-h-[152.172px] object-cover md:max-w-[138px] md:min-h-[175px] md:max-h-[175px] rounded-t-lg"
                 data-src={actor.profile_path ? `https://www.themoviedb.org/t/p/w138_and_h175_face${actor.profile_path}` : noimage} 
             ref={imgRef}
         
