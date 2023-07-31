@@ -212,7 +212,7 @@ function Banner({
                                             
                                                     <li onClick={() => navigate(`/category/${genre.id}/${genre.name}`)} 
                                                         key={i}
-                                                        className='cursor-pointer mr-1.5 inline-flex text-white font-medium border border-solid border-white rounded-2xl py-1 px-3 hover:bg-sky-600'>
+                                                        className='cursor-pointer mr-1.5 mb-2 inline-flex text-white font-medium border border-solid border-white rounded-2xl py-1 px-3 hover:bg-sky-600'>
                                                         {genre.name}
                                                     </li>
                                                 
