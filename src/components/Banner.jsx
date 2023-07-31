@@ -156,11 +156,11 @@ function Banner({
 
                                 </> : 
                                     <>
-                                    <div className='w-fit'>
+                                    
                                     <h1 className="md:inline-block md:w-4/5 text-2xl md:text-3xl mt-3 md:mt-5 md:mt-0 text-white text-center font-bold md:mb-4">{title} {year ? <span className='text-gray-200 font-normal'>({year})</span> : null }</h1>
                                     <p className='md:inline-block md:text-2xl text-xl md:w-1/6 text-center md:text-right font-medium'><span className='text-yellow-300'>★</span>{voteAverage?.toFixed(1)}</p>
 
-                                    </div>
+                                   
                                     <p className='text-gray-50 font-medium'>{rhours}h {rminutes}m</p>
                                     <p className="my-5 text-white font-medium">{overview}</p>
                                     
