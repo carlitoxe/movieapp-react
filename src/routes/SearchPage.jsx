@@ -35,16 +35,17 @@ function SearchPage() {
         />
                 <HeaderRight />
             </Header>
-            {!loadingMovies && movies.length > 0 ? 
+            
+            {movies.length > 0 ? 
             <>
-            <h1 className="text-center font-medium text-2xl text-white mt-6 md:mt-10 mb-4 md:mb-8">Search for '{query}'</h1>
+            <h1 className="text-center font-medium text-2xl text-white mt-6 md:mt-10 mb-4 md:mb-8">Search for <span className="font-bold italic">"{query}"</span></h1>
                 <RenderMovies 
                     movies={movies}
                     loading={loadingMovies}
                     lastMovieElementRef={lastMovieElementRef}
                 />
                 </>
-                : <div className="text-center font-medium text-2xl text-white md:mt-10 mb-8">No Results for '{query}'</div>
+                : <div className="text-center font-medium text-2xl text-white md:mt-10 mb-8">No Results for "{query}"</div>
             }
 
         </>
