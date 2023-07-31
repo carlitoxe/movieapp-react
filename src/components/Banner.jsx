@@ -169,19 +169,22 @@ function Banner({
                                     <p className="my-5 text-white font-medium">{overview}</p>
                                     
                                     <article className='flex items-center'>
-                                    <ul className='min-w-[140px]'>    
-                                    <p className='text-gray-100'>Directed by</p>
-                                        {directors?.map((director, i) => {
-                                            return (
-                                                <li 
-                                                    className='text-white font-medium inline-flex mr-2' 
-                                                    key={i}
-                                                >
-                                                    {director.name}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
+                                    {directors.length > 0 ? 
+                                                <ul className='min-w-[140px]'>    
+                                                <p className='text-gray-100'>Directed by</p>
+                                                    {directors?.map((director, i) => {
+                                                        return (
+                                                            <li 
+                                                                className='text-white font-medium inline-flex mr-2' 
+                                                                key={i}
+                                                            >
+                                                                {director.name}
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul> : null
+                                    }
+                            
 
                                     {writers.length > 0 ? 
 
