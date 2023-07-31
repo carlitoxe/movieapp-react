@@ -61,7 +61,7 @@ function SearchForm({value, setValue}) {
     <button
   type="submit"
   onClick={() => setValue(search)}
-  className="absolute top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-blue-600 rounded-r-full border border-blue-700 hover:bg-blue-800 focus:ring-1 focus:outline-none  hover:bg-blue-800 focus:ring-blue-800"
+  className="absolute top-0 right-0 p-2 px-2.5 h-full text-white bg-blue-600 rounded-r-full border border-blue-700 hover:bg-blue-800 focus:ring-1 focus:outline-none  hover:bg-blue-800 focus:ring-blue-800"
 >
   <svg
     className="w-4 h-4"
