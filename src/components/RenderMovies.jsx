@@ -8,7 +8,7 @@ function RenderMovies({movies, loading, lastMovieElementRef}) {
     return (
         <>
         {
-                  <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 md:gap-6 mb-6 px-5">
+                  <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 md:gap-6 mb-6 px-3 md:px-5">
                    
                   { 
 
