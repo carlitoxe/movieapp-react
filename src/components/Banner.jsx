@@ -121,7 +121,7 @@ function Banner({
                                 <>
                                      { isPhone &&  
                                 <div className='min-w-[150px] w-[150px] h-[200px] min-h-[200px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
-                                <Skeleton width={150} height={200} style={{marginBottom: '20px'}}/>
+                                <Skeleton width={190} height={280} style={{marginBottom: '20px'}}/>
                             </div>}
                               {  !isPhone &&
                                 <div className='min-w-[150px] w-[150px] h-[200px] min-h-[200px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
@@ -132,7 +132,7 @@ function Banner({
                                     <img 
                                         src={url ? url : noimage} 
                                         alt={title ? `${title} poster` : null}
-                                        className="movie-poster object-cover min-w-[150px] w-[150px] h-[225px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg"              
+                                        className="movie-poster object-cover min-w-[190px] w-[190px] h-[280px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg"              
                                     />
                                 }
            
@@ -156,8 +156,11 @@ function Banner({
 
                                 </> : 
                                     <>
-                                    <h1 className="inline-block w-4/5 text-3xl mt-5 md:mt-0 text-white text-center font-bold mb-4">{title} {year ? <span className='text-gray-200 font-normal'>({year})</span> : null }</h1>
-                                    <p className='inline-block md:text-2xl text-xl w-1/6 text-right font-medium'><span className='text-yellow-300'>★</span>{voteAverage?.toFixed(1)}</p>
+                                    <div className='w-fit'>
+                                    <h1 className="md:inline-block md:w-4/5 text-2xl md:text-3xl mt-3 md:mt-5 md:mt-0 text-white text-center font-bold md:mb-4">{title} {year ? <span className='text-gray-200 font-normal'>({year})</span> : null }</h1>
+                                    <p className='md:inline-block md:text-2xl text-xl md:w-1/6 text-center md:text-right font-medium'><span className='text-yellow-300'>★</span>{voteAverage?.toFixed(1)}</p>
+
+                                    </div>
                                     <p className='text-gray-50 font-medium'>{rhours}h {rminutes}m</p>
                                     <p className="my-5 text-white font-medium">{overview}</p>
                                     
