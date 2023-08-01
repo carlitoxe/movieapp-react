@@ -3,7 +3,7 @@ function Trailer({trailer, loading}) {
             trailer ? 
             <>
             <h2 className="text-white text-2xl font-bold ml-4 md:ml-8 mt-7">Trailer</h2>
-             <article className="md:mt-0 px-4 mb-10 md:mr-1 md:px-20 md:mb-6">
+             <article className="md:mt-0 px-4 mb-10 md:mr-1 md:px-20 md:pb-6">
             <div className="relative pt-[56.25%]">
             {
                 !loading ? 
