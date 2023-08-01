@@ -17,22 +17,22 @@ function App() {
   return (
     <>
       <SkeletonTheme baseColor='#313131' highlightColor='#525252'>
-      <HashRouter>
-       {/* <Header>
-                <HeaderLeft />
-                <HeaderRight />
-        </Header> */}
-        <ScrollToTop />
-        <Routes>
-          
-          <Route path='/' element={<HomePage />} />
-          <Route path='/trends' element={<TrendingPage />}/>
-          <Route path='/movie/:id' element={<MoviePage />}/>
-          <Route path='/category/:id/:name' element={<CategoryPage />}/> 
-          <Route path='/results' element={<SearchPage />}/>
-          <Route path='*' element={<p>Not Found</p>} />
-        </Routes>
-      </HashRouter>
+        <HashRouter>
+        {/* <Header>
+                  <HeaderLeft />
+                  <HeaderRight />
+          </Header> */}
+          <ScrollToTop />
+          <Routes>
+            
+            <Route path='/' element={<HomePage />} />
+            <Route path='/trends' element={<TrendingPage />}/>
+            <Route path='/movie/:id' element={<MoviePage />}/>
+            <Route path='/category/:id/:name' element={<CategoryPage />}/> 
+            <Route path='/results' element={<SearchPage />}/>
+            <Route path='*' element={<p>Not Found</p>} />
+          </Routes>
+        </HashRouter>
       </SkeletonTheme>
     </>
   )
