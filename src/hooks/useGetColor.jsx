@@ -1,22 +1,30 @@
 import ColorThief from '/node_modules/colorthief/dist/color-thief.mjs';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 
 function useGetColor({url}) {
-
-    const colorThief = new ColorThief();
-    const img = new Image();
-    img.crossOrigin = 'Anonymous';
-    img.src = url;
-
+    // console.log(imgRef.current);
     const colorDefault = ['0', '0', '0'];
     const [colors, setColors] = useState(colorDefault);
     
+    const img = new Image();
+    img.src = url
+    img.crossOrigin = 'Anonymous';
+    // img.setAttribute('ref', imgRef.current);
+    console.log(img);
+    const colorThief = new ColorThief();
     function getColor() {
-        console.log(img.src);
-        colorThief
-        return setColors(colorThief.getColor(img));
+        try {
+            const color = colorThief.getColor(img);
+            setColors(color)
+        } catch (e) {
+            console.log(e);
+        }
+        // console.log(img.src);
+        
     }
+
+
 
 
     // console.log(poster);

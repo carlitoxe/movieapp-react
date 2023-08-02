@@ -24,7 +24,7 @@ function TrendingPreview() {
 
     // console.log(movies);
     return (
-        <section id="trendingPreview" className="trendingPreview-container mt-2 md:mt-7 md:px-8">
+        <section id="trendingPreview" className="trendingPreview-container mt-2 md:mt-7 md:px-8 h-[420.188px]">
             <div className="trendingPreview-header flex justify-between items-center p-4 pb-2 md:p-4 md:pl-6 md:px-3">
                 <h2 className="trendingPreview-title text-2xl font-semibold text-white">Trending</h2>
                 <button 

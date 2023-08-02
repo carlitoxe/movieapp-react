@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
 import ColorThief from '/node_modules/colorthief/dist/color-thief.mjs';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import noimage from '../assets/no-image.svg'
 import { useGetColor } from '../hooks/useGetColor';
 import { BackgroundGradient } from './BackgroundGradient';
+import { lazyLoading } from '../hooks/lazyLoading';
 
 
 function Banner({
@@ -25,6 +26,7 @@ function Banner({
 
 {
     const navigate = useNavigate();
+    const imgRef = useRef();
 
     // const colorThief = new ColorThief();
     // const img = new Image();
@@ -45,19 +47,26 @@ function Banner({
         
     const url = poster && `https://image.tmdb.org/t/p/w300${poster}`;
     const [colors, getColor, img] = useGetColor({url});
-    
     useEffect(() => {
-            img.addEventListener('load', getColor);   
+        img.addEventListener('load', getColor);   
     }, [loading])
 
 
-    const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
-        const hex = x.toString(16)
-        return hex.length === 1 ? '0' + hex : hex
-      }).join('')
+useEffect(() => {
+    if (imgRef.current) {
+        lazyLoading(imgRef)
+    }
 
-      let hexColor = rgbToHex(colors[0], colors[1], colors[2]);
-      console.log(hexColor);
+}, [loading])
+    // console.log(colors);
+
+    // const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+    //     const hex = x.toString(16)
+    //     return hex.length === 1 ? '0' + hex : hex
+    //   }).join('')
+
+    //   let hexColor = rgbToHex(colors[0], colors[1], colors[2]);
+    //   console.log(hexColor);
 
     
     // console.log(releaseDate);
@@ -84,6 +93,7 @@ function Banner({
         }
         return false
     })
+
 
     // backgroundGradient.style.background = ``
     // console.log(writers);
@@ -129,13 +139,13 @@ function Banner({
                                 </div>}
                                 </>
                                : 
-                                    <img 
-                                        src={url ? url : noimage} 
+                                    <img
+                                        ref={imgRef}
+                                        data-src={url ? url : noimage} 
                                         alt={title ? `${title} poster` : null}
-                                        className="movie-poster object-cover min-w-[190px] w-[190px] h-[280px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg"              
+                                        className="movie-poster object-cover min-w-[190px] w-[190px] h-[280px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg"             
                                     />
                                 }
-           
                             </div>
                             <div className="info-container mx-2 md:ml-4 md:ml-7 md:mr-4">
                                 {loading ? 

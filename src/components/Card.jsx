@@ -6,7 +6,7 @@ import { RenderMovieSkeleton } from "./RenderMovieSkeleton"
 
 
 function Card({movie, loading, img, movies, lastMovieElementRef, i}) {
-    const imgRef = useRef(null)
+    const imgRef = useRef(null);
     const navigate = useNavigate();
     
 
