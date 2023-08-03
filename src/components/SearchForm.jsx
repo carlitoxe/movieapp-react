@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../context/userContext";
 
 function SearchForm({value, setValue}) {
     const navigate = useNavigate();
     const [search, setSearch] = useState(value);
+    const { language, texts } = useContext(UserContext);
+
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -55,7 +58,7 @@ function SearchForm({value, setValue}) {
       value={search} 
       onChange={e => setSearch(e.target.value.toLowerCase())}
       className="block w-full px-8 py-1.5 pl-5 border rounded-full bg-transparent border-gray-700  placeholder-gray-500  text-white focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700"
-      placeholder="Search for movies..."
+      placeholder={texts.search.placeholder}
      
     />
     <button

@@ -16,7 +16,7 @@ function PreviewCard({movie, loading, img}) {
     }, [img])
 
     return (
-        <div className="flex flex-col max-w-[150px] h-[322.188px]" key={movie.id}>
+        <div className="flex flex-col max-w-[150px]" key={movie.id}>
         <img 
             data-src={`https://image.tmdb.org/t/p/w200${img}`} 
             alt={`${movie.title} poster`} 

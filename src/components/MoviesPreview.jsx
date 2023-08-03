@@ -8,7 +8,7 @@ function MoviesPreview({movies, loading}) {
 
     
     return (
-        <article className="trendingPreview-movieList flex overflow-x-scroll overflow-y-hidden gap-3.5 pb-2.5 pt-3.5 px-3">
+        <article className="trendingPreview-movieList flex overflow-x-scroll overflow-y-hidden gap-3.5 pt-3.5 px-3 pb-2">
     
         {!loading ? (movies.filter(movie => movie.poster_path).map((movie, i) => {
 

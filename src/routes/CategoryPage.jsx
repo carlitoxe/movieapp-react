@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { RenderMovies } from "../components/RenderMovies";
 import { useGetItemsAPI } from "../hooks/useApi";
 import { Header } from "../components/Header";
@@ -7,15 +7,17 @@ import { HeaderLeft } from "../components/HeaderLeft";
 import { HeaderRight } from "../components/HeaderRight";
 import { SearchForm } from "../components/SearchForm";
 import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
+import { UserContext } from "../context/userContext";
 
 function CategoryPage() {
+    const { language, texts } = useContext(UserContext);
     const { id, name } = useParams();
     const [query, setQuery] = useState('')
 
     const [movies, getMovies, loading, getMoreMovies, hasMore] = useGetItemsAPI({destruct: "results"})
 
     const lastMovieElementRef = useInfiniteScroll(
-		() => getMoreMovies("/discover/movie", { with_genres: id}),
+		() => getMoreMovies("/discover/movie", { with_genres: id, language}),
 		loading,
 		hasMore
 	);
@@ -23,9 +25,9 @@ function CategoryPage() {
     // const [categories, getCategories, loadingCategories] = useGetItemsAPI({destruct: "genres"})
 
     useEffect(() => {
-        getMovies('discover/movie', { with_genres: id });
+        getMovies('discover/movie', { with_genres: id , language});
         // getCategories('genre/movie/list');
-    }, [id])
+    }, [id, language])
 
     // console.log(categories);
     // const category = categories.find(category => category.id == id)

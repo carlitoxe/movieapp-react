@@ -11,6 +11,7 @@ import { Header } from './components/Header';
 import { HeaderLeft } from './components/HeaderLeft';
 import { HeaderRight } from './components/HeaderRight';
 import { SkeletonTheme } from 'react-loading-skeleton';
+import { UserProvider } from './context/userContext';
 
 function App() {
   // useScrollToTop();
@@ -23,6 +24,7 @@ function App() {
                   <HeaderRight />
           </Header> */}
           <ScrollToTop />
+          <UserProvider>
           <Routes>
             
             <Route path='/' element={<HomePage />} />
@@ -32,6 +34,8 @@ function App() {
             <Route path='/results' element={<SearchPage />}/>
             <Route path='*' element={<p>Not Found</p>} />
           </Routes>
+          </UserProvider>
+      
         </HashRouter>
       </SkeletonTheme>
     </>

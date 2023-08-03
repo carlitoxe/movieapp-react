@@ -22,6 +22,7 @@ function Banner({
     genres, 
     crew,
     loadingCrew,
+    texts
 }) 
 
 {
@@ -129,11 +130,11 @@ useEffect(() => {
                         <div className="poster flex justify-center md:block md:ml-4">
                                 {loading ?
                                 <>
-                                     { isPhone &&  
+                                     { isPhone ? 
                                 <div className='min-w-[190px] w-[190px] h-[200px] min-h-[280px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
                                 <Skeleton width={190} height={280} style={{marginBottom: '20px'}}/>
-                            </div>}
-                              {  !isPhone &&
+                            </div>
+                              :
                                 <div className='min-w-[150px] w-[150px] h-[200px] min-h-[200px] md:min-w-[250px] md:w-[250px] md:h-[375px] rounded-lg'>
                                     <Skeleton width={250} height={375}/>
                                 </div>}
@@ -180,7 +181,7 @@ useEffect(() => {
                                     <article className='flex items-center'>
                                     {directors.length > 0 ? 
                                                 <ul className='min-w-[140px]'>    
-                                                <p className='text-gray-100'>Directed by</p>
+                                                <p className='text-gray-100'>{texts.movie.directed}</p>
                                                     {directors?.map((director, i) => {
                                                         return (
                                                             <li 
@@ -198,7 +199,7 @@ useEffect(() => {
                                     {writers.length > 0 ? 
 
                                     <ul className='ml-6'>
-                                    <p className='text-gray-100'>Written by</p>
+                                    <p className='text-gray-100'>{texts.movie.written}</p>
                                         {uniqueWriters?.map((writer, i) => {
                                             return (
                                             

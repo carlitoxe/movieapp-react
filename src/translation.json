@@ -1,0 +1,366 @@
+{
+	"en-US": {
+		"home": {
+			"categories": "Categories",
+			"favorites": "Your favorites",
+			"rated": "Your rated movies",
+			"trends": "Trending",
+			"watchlater": "Watch later"
+		},
+		"account": {
+			"title": "Account",
+			"logout": "Logout"
+		},
+		"actor": {
+			"title": "'s movies"
+		},
+		"approved": {
+			"title": "Approved",
+			"thanks": "Thank you for granting us access to your data. You can now use the app.",
+			"info1": "Redirecting to home in",
+			"info2": "seconds...",
+			"redirect": "Go to home"
+		},
+		"category": {
+			"title": "Category"
+		},
+		"favorites": {
+			"title": "Favorite movies"
+		},
+		"login": {
+			"title": "Login",
+			"description": "Please enter your The Movie DB account details to login.",
+			"username": "Enter your username",
+			"password": "Enter your password",
+			"button": "Login",
+			"success": "Login successful"
+		},
+		"movie": {
+            "directed": "Directed by",
+            "written": "Written by",
+			"trailer": "Trailer",
+			"cast": "Cast",
+			"related": "Related movies"
+		},
+		"search": {
+			"title": "Results for: ",
+			"placeholder": "Search for a movie...",
+			"firstError": "No results found for:",
+			"secondError": "Try again with another name"
+		},
+		"trends": {
+			"title": "Trending"
+		},
+		"back": "Back",
+		"banner": {
+			"addFav": "Add movie to favorites",
+			"removeFav": "Remove movie from favorites",
+			"addWatchlater": "Add movie to watch later",
+			"removeWatchlater": "Remove movie from watch later"
+		},
+		"card": {
+			"click": "Click to see more",
+			"dbclick": "Double tap to see more",
+			"more": "More options for the movie",
+			"favorite": "Favorites",
+			"watchLater": "Watch later"
+		},
+		"footer": {
+			"credits": "Project created with TMDB API and Platzi 💚",
+			"rights": "All rights reserved"
+		},
+		"header": {
+			"login": "Login",
+			"signup": "Register",
+			"logout": "Logout",
+			"title": "Change language",
+			"home": "Home",
+			"languages": [
+				{
+					"name": "English",
+					"iso": "en-US",
+                    "flag": "🇺🇸"
+				},
+				{
+					"name": "Spanish",
+					"iso": "es-MX",
+                    "flag": "🇲🇽"
+				},
+				{
+					"name": "French",
+					"iso": "fr-FR",
+                    "flag": "🇫🇷"
+				}
+			]
+		},
+		"rating": "out of",
+		"infiniteScroll": {
+			"noResults": "No results found.",
+			"limit": "It seems there are no more results."
+		},
+		"preview": {
+			"more": "See more"
+		},
+		"messages": {
+			"welcome": "Welcome back",
+			"addFavorite": "Movie added to favorites",
+			"removeFavorite": "Movie removed from favorites",
+			"addWatchlater": "Movie added to watch later",
+			"removeWatchlater": "Movie removed from watch later",
+			"rateMovie": "Movie rated successfully",
+			"unrateMovie": "Movie unrated successfully",
+			"logout": "Logged out successfully",
+			"needLogin": "You need to be logged in to do that"
+		},
+		"errors": {
+			"login": "Invalid username or password, make sure you are using your The Movie DB account",
+			"errorLogin": "Something went wrong, please try to login again",
+			"errorLogout": "Something went wrong, try logout again",
+			"errorGet": "There was an error while fetching the data",
+			"errorPost": "There was an error while sending the data"
+		}
+	},
+	"es-MX": {
+		"home": {
+			"categories": "Categorías",
+			"favorites": "Mis favoritos",
+			"rated": "Mis películas calificadas",
+			"trends": "Tendencia",
+			"watchlater": "Ver más tarde"
+		},
+		"account": {
+			"title": "Cuenta",
+			"logout": "Cerrar sesión"
+		},
+		"actor": {
+			"title": "Películas de "
+		},
+		"approved": {
+			"title": "Aprobado",
+			"thanks": "Gracias por darnos acceso a tus datos. Ahora puedes usar la aplicación.",
+			"info1": "Redireccionando a inicio en",
+			"info2": "segundos...",
+			"redirect": "Ir a inicio"
+		},
+		"category": {
+			"title": "Categoría"
+		},
+		"favorites": {
+			"title": "Películas favoritas"
+		},
+		"login": {
+			"title": "Iniciar sesión",
+			"description": "Por favor ingresa tus datos de The Movie DB para iniciar sesión.",
+			"username": "Ingresa tu nombre de usuario",
+			"password": "Ingresa tu contraseña",
+			"button": "Iniciar sesión",
+			"success": "Inicio de sesión exitoso"
+		},
+		"movie": {
+            "directed": "Dirigida por",
+            "written": "Escrita por",
+			"trailer": "Trailer",
+			"cast": "Reparto",
+			"related": "Películas relacionadas"
+		},
+		"search": {
+			"title": "Resultados para: ",
+			"placeholder": "Busca una película...",
+			"firstError": "No se encontraron resultados para:",
+			"secondError": "Intenta de nuevo con otro nombre."
+		},
+		"trends": {
+			"title": "Tendencia"
+		},
+		"back": "Regresar",
+		"banner": {
+			"addFav": "Agregar película a favoritos",
+			"removeFav": "Quitar película de favoritos",
+			"addWatchlater": "Agregar película a ver más tarde",
+			"removeWatchlater": "Quitar película de ver más tarde"
+		},
+		"card": {
+			"click": "Clic para ver más",
+			"dbclick": "Toca dos veces para ver más",
+			"more": "Más opciones para la película",
+			"favorite": "Favoritos",
+			"watchLater": "Ver más tarde"
+		},
+		"footer": {
+			"credits": "Proyecto creado con la API de TMDB y Platzi 💚",
+			"rights": "Todos los derechos reservados"
+		},
+		"header": {
+			"login": "Iniciar sesión",
+			"signup": "Registrarse",
+			"logout": "Cerrar sesión",
+			"title": "Cambiar el idioma",
+			"home": "Inicio",
+			"languages": [
+                {
+					"name": "English",
+					"iso": "en-US",
+                    "flag": "🇺🇸"
+				},
+				{
+					"name": "Spanish",
+					"iso": "es-MX",
+                    "flag": "🇲🇽"
+				},
+				{
+					"name": "French",
+					"iso": "fr-FR",
+                    "flag": "🇫🇷"
+				}
+			]
+		},
+		"rating": "de",
+		"infiniteScroll": {
+			"noResults": "No se encontraron resultados.",
+			"limit": "No hay más resultados."
+		},
+		"preview": {
+			"more": "Ver más"
+		},
+		"messages": {
+			"welcome": "!Bienvenido de nuevo",
+			"addFavorite": "Película agregada a favoritos",
+			"removeFavorite": "Película eliminada de favoritos",
+			"addWatchlater": "Película agregada a ver más tarde",
+			"removeWatchlater": "Película eliminada de ver más tarde",
+			"rateMovie": "Película calificada exitosamente",
+			"unrateMovie": "Calificación de película removida",
+			"logout": "Cerraste sesión correctamente",
+			"needLogin": "Necesitas iniciar sesión para hacer eso"
+		},
+		"errors": {
+			"login": "El nombre de usuario o contraseña son incorrectos, asegúrate de usar tu cuenta de The Movie DB",
+			"errorLogin": "Algo salió mal, inicia sesión de nuevo",
+			"errorLogout": "Algo salió mal, intenta cerrar sesión de nuevo",
+			"errorGet": "Hubo un error al obtener los datos",
+			"errorPost": "Hubo un error al enviar los datos"
+		}
+	},
+	"fr-FR": {
+		"home": {
+			"categories": "Catégories",
+			"favorites": "Mes favoris",
+			"rated": "Mes films notés",
+			"trends": "Tendance",
+			"watchlater": "Regarder plus tard"
+		},
+		"account": {
+			"title": "Compte",
+			"logout": "Déconnexion"
+		},
+		"actor": {
+			"title": "Films de "
+		},
+		"approved": {
+			"title": "Approuvé",
+			"thanks": "Merci d'avoir donné accès à vos données. Vous pouvez désormais utiliser l'application.",
+			"info1": "Redirection vers l'accueil dans",
+			"info2": "secondes...",
+			"redirect": "Aller à l'accueil"
+		},
+		"category": {
+			"title": "Catégorie"
+		},
+		"favorites": {
+			"title": "Films préférés"
+		},
+		"login": {
+			"title": "Connexion",
+			"description": "Veuillez entrer vos données de The Movie DB pour vous connecter.",
+			"username": "Entrez votre nom d'utilisateur",
+			"password": "Entrez votre mot de passe",
+			"button": "Connexion",
+			"success": "Connexion réussie"
+		},
+		"movie": {
+            "directed": "Dirigé par",
+            "written": "Écrit par",
+			"trailer": "Bande-annonce",
+			"cast": "Acteurs",
+			"related": "Films similaires"
+		},
+		"search": {
+			"title": "Résultats pour: ",
+			"placeholder": "Rechercher un film...",
+			"error": "Entrez un nom de film",
+			"firstError": "Aucun résultat trouvé pour:",
+			"secondError": "Réessayez avec un autre nom"
+		},
+		"trends": {
+			"title": "Tendances"
+		},
+		"back": "Retour",
+		"banner": {
+			"addFav": "Ajouter film à vos favoris",
+			"removeFav": "Supprimer film de vos favoris",
+			"addWatchlater": "Ajouter un film à regarder plus tard",
+			"removeWatchlater": "supprimer le film de la montre plus tard"
+		},
+		"card": {
+			"click": "Cliquez pour voir plus",
+			"dbclick": "Double-cliquez pour voir plus",
+			"more": "Plus d'options pour le film",
+			"favorite": "Favoris",
+			"watchLater": "Fegarder plus tard"
+		},
+		"footer": {
+			"credits": "Projet créé avec l'API de TMDB et Platzi 💚",
+			"rights": "Tous droits réservés"
+		},
+		"header": {
+			"login": "Connexion",
+			"signup": "Inscription",
+			"logout": "Fermer la session",
+			"title": "Changer de langue",
+			"home": "Début",
+			"languages": [
+                {
+					"name": "English",
+					"iso": "en-US",
+                    "flag": "🇺🇸"
+				},
+				{
+					"name": "Spanish",
+					"iso": "es-MX",
+                    "flag": "🇲🇽"
+				},
+				{
+					"name": "French",
+					"iso": "fr-FR",
+                    "flag": "🇫🇷"
+				}
+			]
+		},
+		"rating": "de",
+		"infiniteScroll": {
+			"noResults": "Aucun résultat trouvé.",
+			"limit": "Il n'y a plus de résultats."
+		},
+		"preview": {
+			"more": "Voir plus"
+		},
+		"messages": {
+			"welcome": "!Bienvenue de nouveau",
+			"addFavorite": "Film ajouté aux favoris",
+			"removeFavorite": "Film retiré des favoris",
+			"addWatchlater": "Film ajouté à regarder plus tard",
+			"removeWatchlater": "Supprimé Regarder plus tard le film",
+			"rateMovie": "Film classé avec succès",
+			"unrateMovie": "Classement du film supprimé",
+			"logout": "Vous avez bien été déconnecté",
+			"needLogin": "Vous devez vous connecter pour le faire"
+		},
+		"errors": {
+			"login": "Le nom d'utilisateur ou le mot de passe sont incorrects, asezurez-vous d'utiliser votre compte de The Movie DB",
+			"errorLogin": "Une erreur est survenue, veuillez vous reconnecter",
+			"errorLogout": "Une erreur est survenue, réessayez de vous déconnecter",
+			"errorGet": "Une erreur s'est produite lors de la récupération des données",
+			"errorPost": "Une erreur s'est produite lors de l'envoi des données"
+		}
+	}
+}

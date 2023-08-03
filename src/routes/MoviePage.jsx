@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetItemAPI, useGetItemsAPI } from "../hooks/useApi"
 import { Header } from "../components/Header";
@@ -9,6 +9,7 @@ import { Cast } from "../components/Cast";
 import { MoviesPreview } from "../components/MoviesPreview";
 import { Trailer } from "../components/Trailer";
 import { SearchForm } from "../components/SearchForm";
+import { UserContext } from "../context/userContext";
 
 function MoviePage() {
     const navigate = useNavigate();
@@ -20,19 +21,20 @@ function MoviePage() {
     const [cast, getCast, loadingCast] = useGetItemsAPI({destruct: 'cast'});
     const [videos, getVideos, loadingVideos] = useGetItemsAPI({destruct: 'results'});
     const [related, getRelated, loadingRelated] = useGetItemsAPI({destruct: 'results'});
+    const { language, texts } = useContext(UserContext);
 
-    const initialRequest = async () => {
-        const data = await getMovie();
+    const initialRequest = async (lang) => {
+        const data = await getMovie({language: lang});
         setMovie(data);
-        getCrew(`movie/${id}/credits`);
-        getCast(`movie/${id}/credits`);
-        getVideos(`movie/${id}/videos`);
-        getRelated(`movie/${id}/recommendations`);
+        getCrew(`movie/${id}/credits`, {language: lang});
+        getCast(`movie/${id}/credits`, {language: lang});
+        getVideos(`movie/${id}/videos`, {language: lang});
+        getRelated(`movie/${id}/recommendations`, {language: lang});
     }
     
     useEffect(() => {
-        initialRequest();
-    }, [])
+        initialRequest(language);
+    }, [id, language])
 
     // console.log(videos);
     const trailer = videos?.find(video => video.type === 'Trailer');
@@ -78,11 +80,13 @@ function MoviePage() {
                 genres={movie.genres}
                 crew={crew}
                 loadingCrew={loadingCrew}
+                texts={texts}
             >
             </Banner>
             <Cast
                 cast={cast}
                 loadingCast={loadingCast}
+                texts={texts}
              />
              <Trailer 
                 trailer={trailer}
@@ -92,7 +96,7 @@ function MoviePage() {
                     {related.length > 0 ?
                     
                 <article className="pt-3 md:pt-0 mb-5 md:px-8 md:mb-5">
-                    <h2 className="ml-4 text-white text-2xl font-bold md:mb-3">Related Movies</h2>
+                    <h2 className="ml-4 text-white text-2xl font-bold md:mb-3">{texts.movie.related}</h2>
                         <MoviesPreview 
                             movies={related}
                             loading={loadingRelated}
