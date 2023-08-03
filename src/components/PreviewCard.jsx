@@ -29,7 +29,7 @@ function PreviewCard({movie, loading, img}) {
         />
   
     <p className="mt-2"><span className="text-yellow-300">★</span> {movie.vote_average.toFixed(1)}</p>
-    <a className="cursor-pointer hover:text-blue-700 mt-0.5" onClick={() => navigate(`/movie/${movie.id}`)}>{movie.title}</a>
+    <a className="cursor-pointer hover:text-blue-600 mt-0.5" onClick={() => navigate(`/movie/${movie.id}`)}>{movie.title}</a>
 </div>
     )
 }

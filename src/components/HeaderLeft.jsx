@@ -2,7 +2,7 @@ import logo from '../assets/movieapp-logo.svg'
 
 function HeaderLeft() {
     return (
-    <div className="header-container-left flex md:justify-start justify-around items-center md:pr-4">
+    <div className="header-container-left flex md:justify-start justify-around items-center md:pr-7">
         <a href="index.html" className="header-title flex text-2xl md:text-3xl items-center">
 
             <img src={logo} className='w-[32px] h-[32px] md:w-[42px] md:h-[42px]' alt="logo" />
