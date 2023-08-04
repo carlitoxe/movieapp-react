@@ -29,7 +29,7 @@ function CategoriesPreview() {
 
     return (
         <>
-            <section className="mt-3 md:px-8 md:mb-8 md:mt-8">
+            <section className="md:px-8 md:mb-8 md:mt-8">
                 <h1 className="pl-4 md:pl-6 text-2xl font-semibold text-white">{texts.home.categories}</h1>
                 {loading ? (!isPhone ? <div className="mt-5 px-8"> <Skeleton count={2}/> </div> : 
                 <div className="mt-5 px-10"> <Skeleton count={6}/> </div>) :

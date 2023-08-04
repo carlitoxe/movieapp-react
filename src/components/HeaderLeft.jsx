@@ -57,7 +57,6 @@ function HeaderLeft() {
           options={texts.header.languages} 
           setValue={setLanguage} 
           value={language}
-          isNavOpen={isNavOpen}
           setIsNavOpen={setIsNavOpen} 
       />
         </li>

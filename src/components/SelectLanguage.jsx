@@ -1,4 +1,4 @@
-const SelectLanguage = ({ title = '', options = [], setValue, value, isNavOpen, setIsNavOpen }) => {
+const SelectLanguage = ({ title = '', options = [], setValue, value, setIsNavOpen }) => {
     return (
         <select 
             title={title} 
