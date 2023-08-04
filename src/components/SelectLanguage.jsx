@@ -1,10 +1,14 @@
-const SelectLanguage = ({ title = '', options = [], setValue, value }) => {
+const SelectLanguage = ({ title = '', options = [], setValue, value, isNavOpen, setIsNavOpen }) => {
     return (
         <select 
             title={title} 
             id="lang" 
             className="select-language-container h-[30px] text-white rounded-lg bg-black border border-gray-700 focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700" 
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => {
+                setValue(e.target.value)
+                setIsNavOpen(false)
+            }
+            }
             value={value}
         >
             {options.map(({name, iso, flag}) => (

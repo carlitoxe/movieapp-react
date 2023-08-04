@@ -9,15 +9,24 @@ function HeaderRight() {
     console.log(language);
     
     return (
-    <div className="header-container-right hidden md:flex items-center w-full md:w-fit">
-        <SelectLanguage 
-            title={texts.header.title} 
-            options={texts.header.languages} 
-            setValue={setLanguage} 
-            value={language} 
-        />
+    <>
+        <div className="header-container-right hidden md:flex items-center w-full md:w-fit">
+            <SelectLanguage 
+                title={texts.header.title} 
+                options={texts.header.languages} 
+                setValue={setLanguage} 
+                value={language}
 
-    </div>
+            />
+
+        </div>
+    
+    
+
+    
+    </>
+
+    
 
     )
 }
