@@ -16,7 +16,6 @@ function HeaderRight() {
                 options={texts.header.languages} 
                 setValue={setLanguage} 
                 value={language}
-
             />
 
         </div>

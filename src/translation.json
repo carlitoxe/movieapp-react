@@ -198,17 +198,17 @@
 			"home": "Inicio",
 			"languages": [
                 {
-					"name": "English",
+					"name": "Inglés",
 					"iso": "en-US",
                     "flag": "🇺🇸"
 				},
 				{
-					"name": "Spanish",
+					"name": "Español",
 					"iso": "es-MX",
                     "flag": "🇲🇽"
 				},
 				{
-					"name": "French",
+					"name": "Francés",
 					"iso": "fr-FR",
                     "flag": "🇫🇷"
 				}
@@ -320,17 +320,17 @@
 			"home": "Début",
 			"languages": [
                 {
-					"name": "English",
+					"name": "Anglais",
 					"iso": "en-US",
                     "flag": "🇺🇸"
 				},
 				{
-					"name": "Spanish",
+					"name": "Espagnol",
 					"iso": "es-MX",
                     "flag": "🇲🇽"
 				},
 				{
-					"name": "French",
+					"name": "Français",
 					"iso": "fr-FR",
                     "flag": "🇫🇷"
 				}
