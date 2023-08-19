@@ -9,9 +9,7 @@ import { CategoriesPreview } from "../components/CategoriesPreview";
 import { Footer } from "../components/Footer";
 
 function HomePage() {
-    const navigate = useNavigate();
-    const [query, setQuery] = useState('');
-    
+    const [query, setQuery] = useState(''); 
     
     return (
         <>
