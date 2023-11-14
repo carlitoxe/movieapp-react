@@ -2,8 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import translationsRaw from "../translation.json";
 
-const initialLanguage = navigator.language;
 const translations = JSON.parse(JSON.stringify(translationsRaw));
+const initialLanguage = navigator.language || 'en-US';
 
 const UserContext = createContext({
   language: "",
