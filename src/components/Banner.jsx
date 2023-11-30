@@ -148,11 +148,11 @@ useEffect(() => {
                                     />
                                 }
                             </div>
-                            <div className="info-container mx-2 md:ml-4 md:ml-7 md:mr-4">
+                            <div className="info-container mx-2 md:ml-7 md:mr-4 rounded-xl w-full">
                                 {loading ? 
                                 <>
                                 {isPhone && <>
-                                    <h1 className="md:inline block text-center mt-4 md:flex md:mt-2 md:mb-4"><Skeleton width={180} /></h1>
+                                    <h1 className="md:inline-block text-center mt-4 md:flex md:mt-2 md:mb-4"><Skeleton width={180} /></h1>
                                 <p className='md:inline-block md:w-1/6 font-medium text-center'><Skeleton width={40}/></p>
                                 <p className="text-white font-medium"><Skeleton width={60}/></p>
                                 <p className="my-5 text-white font-medium"><Skeleton height={80}/></p>

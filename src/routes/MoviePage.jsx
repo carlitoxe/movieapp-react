@@ -39,7 +39,6 @@ function MoviePage() {
     // console.log(videos);
     const trailer = videos?.find(video => video.type === 'Trailer');
 
-
     // console.log(credits);
     // const { api } = useAPI();
     // const [ movie, setMovie ] = useState({});
